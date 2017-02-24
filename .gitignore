@@ -13,6 +13,7 @@ hs_err_pid*
 
 # IDEA profiles and
 .idea/**
+*.iml
 
 # output
 out/**
