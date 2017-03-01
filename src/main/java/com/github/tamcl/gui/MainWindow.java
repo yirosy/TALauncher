@@ -1,6 +1,5 @@
 package com.github.tamcl.gui;
 
-import com.github.tamcl.main.Main;
 import com.sun.awt.AWTUtilities;
 
 import javax.swing.*;
@@ -35,7 +34,7 @@ public class MainWindow extends JFrame{
     }
 
     private void initComponent () {
-        add(new CentreFramePane(getSize()));
+        add(new WindowPane(getSize()));
     }
 
 }

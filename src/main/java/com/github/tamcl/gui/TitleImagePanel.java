@@ -8,32 +8,30 @@ import java.awt.event.MouseMotionAdapter;
 
 /**
  * Created by I331709 on 3/1/2017.
- * Panel of centre
+ * Title panel
  */
-class CentreImagePanel extends JPanel {
+class TitleImagePanel extends JPanel {
 
     private Dimension parentSize = null;
-    private int x;
-    private int y;
+    private int x= 0;
+    private int y= 0;
 
-    CentreImagePanel (Dimension parentSize) {
+    TitleImagePanel (Dimension parentSize) {
         super();
         this.parentSize = parentSize;
-        initCentreImagePanel();
+        initTitleImagePanel();
         initComponent();
     }
 
-    private void initCentreImagePanel() {
-        setSize(new Dimension((int)(parentSize.width* 0.6), (int)(parentSize.height* 0.6)));
-        setBounds((parentSize.width - getWidth())/2,
-                (int) ((parentSize.height - getHeight())/2 + parentSize.getHeight() * 0.05),
-                getWidth(), getHeight());
+    private void initTitleImagePanel () {
+        setSize(new Dimension((int)(parentSize.width * 0.43), (int)(parentSize.height* 0.15)));
+        setBounds((parentSize.width - getWidth())/2, (int) (parentSize.height*0.2),getWidth(),getHeight());
         setOpaque(false);
     }
 
     private void initComponent () {
-        add(new ResourceImageLabel("/images/bkg.png", getSize()));
-        /*addMouseListener(new MouseAdapter() {
+        JLabel title = new ResourceImageLabel("/images/title.png", getSize());
+        title.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent mouseEvent) {
                 super.mousePressed(mouseEvent);
@@ -41,7 +39,7 @@ class CentreImagePanel extends JPanel {
                 y= mouseEvent.getY();
             }
         });
-        addMouseMotionListener(new MouseMotionAdapter() {
+        title.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
             public void mouseDragged(MouseEvent mouseEvent) {
                 super.mouseDragged(mouseEvent);
@@ -49,6 +47,7 @@ class CentreImagePanel extends JPanel {
                 MainWindow.get().setLocation((int) (windowLocation.getX()+ mouseEvent.getX()- x),
                         (int) (windowLocation.getY()+ mouseEvent.getY()- y));
             }
-        });*/
+        });
+        add(title);
     }
 }
