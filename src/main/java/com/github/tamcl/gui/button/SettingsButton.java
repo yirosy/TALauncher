@@ -29,5 +29,11 @@ public class SettingsButton extends JButton{
         setOpaque(false);
         setBorder(null);
         setContentAreaFilled(false);
+        setPressedIcon(new ResourceImageLabel("/images/settings_press.png",
+                new Dimension((int)(parentSize.height*0.053), (int)(parentSize.height*0.053)))
+                .getIcon());
+        setRolloverIcon(new ResourceImageLabel("/images/settings_roll.png",
+                new Dimension((int)(parentSize.height*0.053), (int)(parentSize.height*0.053)))
+                .getIcon());
     }
 }

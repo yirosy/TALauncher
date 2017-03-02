@@ -33,6 +33,12 @@ public class CloseButton extends JButton {
         setOpaque(false);
         setBorder(null);
         setContentAreaFilled(false);
+        setPressedIcon(new ResourceImageLabel("/images/close_press.png",
+                new Dimension((int)(parentSize.height*0.05), (int)(parentSize.height*0.05)))
+                .getIcon());
+        setRolloverIcon(new ResourceImageLabel("/images/close_roll.png",
+                new Dimension((int)(parentSize.height*0.05), (int)(parentSize.height*0.05)))
+                .getIcon());
     }
 
     private void initListener () {
