@@ -1,4 +1,4 @@
-package com.github.tamcl.gui;
+package com.github.tamcl.gui.box;
 
 import com.github.tamcl.util.VersionManager;
 
@@ -7,12 +7,13 @@ import javax.swing.*;
 
 /**
  * Created by I331709 on 2/22/2017.
+ * Version ComboBox
  */
 public class VersionComboBox extends JComboBox<String> {
 
-    VersionManager versionManager;
+    private VersionManager versionManager;
 
-    public VersionComboBox () {super();}
+    private VersionComboBox() {super();}
 
     public VersionComboBox (VersionManager versionManager) {
         this();

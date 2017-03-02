@@ -4,9 +4,7 @@ import com.github.tamcl.gui.image.ResourceImageLabel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
+import java.awt.event.*;
 
 /**
  * Created by I331709 on 3/2/2017.
@@ -42,6 +40,6 @@ public class CloseButton extends JButton {
     }
 
     private void initListener () {
-
+        addActionListener(e -> System.exit(0));
     }
 }
