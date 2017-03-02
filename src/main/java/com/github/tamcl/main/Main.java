@@ -19,7 +19,5 @@ public class Main {
         Main.init();
         MainWindow mainWindow = MainWindow.get();
         mainWindow.setVisible(true);
-
-        //new CentreFramePane().setVisible(true);
     }
 }

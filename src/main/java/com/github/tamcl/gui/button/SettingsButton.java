@@ -7,12 +7,13 @@ import java.awt.*;
 
 /**
  * Created by I331709 on 3/2/2017.
+ * Settings Button
  */
 public class SettingsButton extends JButton{
 
     private Dimension parentSize = null;
 
-    public SettingsButton (Dimension parentSize) {
+    public SettingsButton(Dimension parentSize) {
         super(new ResourceImageLabel("/images/settings.png",
                 new Dimension((int)(parentSize.height*0.053), (int)(parentSize.height*0.053)))
                 .getIcon());
@@ -22,7 +23,7 @@ public class SettingsButton extends JButton{
 
     private void initSettingsButton () {
         setSize(new Dimension((int)(parentSize.height*0.053), (int)(parentSize.height*0.053)));
-        setBounds((int)(parentSize.width*0.73),
+        setBounds((int)(parentSize.width*0.729),
                 (int)(parentSize.height*0.265),
                 getWidth(), getHeight());
         setOpaque(false);
