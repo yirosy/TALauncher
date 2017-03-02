@@ -1,4 +1,5 @@
-package com.github.tamcl.gui;
+package com.github.tamcl.gui.image;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,11 +8,11 @@ import java.awt.*;
  * Created by I331709 on 3/1/2017.
  * Left up image panel
  */
-class LeftUpImagePanel extends JPanel {
+public class LeftUpImagePanel extends JPanel {
 
     private Dimension parentSize = null;
 
-    LeftUpImagePanel(Dimension parentSize) {
+    public LeftUpImagePanel(Dimension parentSize) {
         super();
         this.parentSize = parentSize;
         initLeftUpImagePanel();

@@ -1,5 +1,11 @@
 package com.github.tamcl.gui;
 
+import com.github.tamcl.gui.button.CloseButton;
+import com.github.tamcl.gui.button.SettingsButton;
+import com.github.tamcl.gui.image.CentreImagePanel;
+import com.github.tamcl.gui.image.LeftUpImagePanel;
+import com.github.tamcl.gui.image.TitleImagePanel;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -28,5 +34,7 @@ class WindowPane extends JLayeredPane {
         add(new CentreImagePanel(getSize()), new Integer(10));
         add(new LeftUpImagePanel(getSize()), new Integer(20));
         add(new TitleImagePanel(getSize()), new Integer(30));
+        add(new CloseButton(getSize()), new Integer(25));
+        add(new SettingsButton(getSize()),new Integer(24));
     }
 }
